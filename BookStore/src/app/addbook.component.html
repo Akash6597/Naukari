@@ -1,0 +1,32 @@
+<h2>Add Book</h2>
+
+<div class="container">
+    <form [formGroup]="bookFormGroup">
+         <div class="form-group">
+            Id:<input type="text" formControlName="id" required>
+            <small class="form-text text-danger" *ngIf="bookFormGroup.controls.id.invalid && bookFormGroup.controls.id.touched" >Id is required</small>
+
+        </div>
+            <div class="form-group">
+            Genre:<input type="text" formControlName="genre" required>
+            <small class="form-text text-danger" *ngIf="bookFormGroup.controls.genre.invalid && bookFormGroup.controls.genre.touched" >genre is required</small>
+        </div><div class="form-group">
+            Author:<input type="text" formControlName="author" required>
+            <small class="form-text text-danger" *ngIf="bookFormGroup.controls.author.invalid && bookFormGroup.controls.author.touched" >Author is required</small>
+        </div><div class="form-group">
+            title:<input type="text" formControlName="title" required>
+            <small class="form-text text-danger" *ngIf="bookFormGroup.controls.title.invalid && bookFormGroup.controls.title.touched" >Title is required</small>
+        </div><div class="form-group">
+            Price:<input type="text" formControlName="price" required>
+            <small class="form-text text-danger" *ngIf="bookFormGroup.controls.price.invalid && bookFormGroup.controls.price.touched" >Price is required</small>
+        </div><div class="form-group">
+            Publisher:<input type="text" formControlName="publisher" required>
+            <small class="form-text text-danger" *ngIf="bookFormGroup.controls.publisher.invalid && bookFormGroup.controls.publisher.touched" >Publisher is required</small>
+        </div><div class="form-group">
+            Quantity:<input type="text" formControlName="quantity" required>
+            <small class="form-text text-danger" *ngIf="bookFormGroup.controls.quantity.invalid && bookFormGroup.controls.quantity.touched" >Quantity is required</small>
+        </div>
+
+    </form>
+    <button (click)="add()" [disabled]="!bookFormGroup">Add</button>
+</div>

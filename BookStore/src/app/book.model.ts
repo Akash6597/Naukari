@@ -1,0 +1,27 @@
+export const Book=[
+{
+    id:1,
+    genre:"ABC",
+    author:"BCD",
+    title:"asd",
+    price:200,
+    publisher:"aaa",
+    quantity:5
+},{
+    id:2,
+    genre:"cvb",
+    author:"asd",
+    title:"aas",
+    price:50,
+    publisher:"zxc",
+    quantity:10
+},{
+    id:3,
+    genre:"qwe",
+    author:"hgf",
+    title:"ggg",
+    price:300,
+    publisher:"cdf",
+    quantity:30
+}
+]

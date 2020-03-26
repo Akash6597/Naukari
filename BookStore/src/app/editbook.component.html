@@ -1,0 +1,32 @@
+<h3>Edit</h3>
+
+<div class="container">
+    <form [formGroup]="editBookFormGroup">
+         <div class="form-group">
+            Id:<input type="text" formControlName="id" required>
+            <small class="form-text text-danger" *ngIf="editBookFormGroup.controls.id.invalid && editBookFormGroup.controls.id.touched" >Id is required</small>
+
+        </div>
+            <div class="form-group">
+            Genre:<input type="text" formControlName="genre" required>
+            <small class="form-text text-danger" *ngIf="editBookFormGroup.controls.genre.invalid && editBookFormGroup.controls.genre.touched" >genre is required</small>
+        </div><div class="form-group">
+            Author:<input type="text" formControlName="author" required>
+            <small class="form-text text-danger" *ngIf="editBookFormGroup.controls.author.invalid && editBookFormGroup.controls.author.touched" >Author is required</small>
+        </div><div class="form-group">
+            title:<input type="text" formControlName="title" required>
+            <small class="form-text text-danger" *ngIf="editBookFormGroup.controls.title.invalid && editBookFormGroup.controls.title.touched" >Title is required</small>
+        </div><div class="form-group">
+            Price:<input type="text" formControlName="price" required>
+            <small class="form-text text-danger" *ngIf="editBookFormGroup.controls.price.invalid && editBookFormGroup.controls.price.touched" >Price is required</small>
+        </div><div class="form-group">
+            Publisher:<input type="text" formControlName="publisher" required>
+            <small class="form-text text-danger" *ngIf="editBookFormGroup.controls.publisher.invalid && editBookFormGroup.controls.publisher.touched" >Publisher is required</small>
+        </div><div class="form-group">
+            Quantity:<input type="text" formControlName="quantity" required>
+            <small class="form-text text-danger" *ngIf="editBookFormGroup.controls.quantity.invalid && editBookFormGroup.controls.quantity.touched" >Quantity is required</small>
+        </div>
+
+    </form>
+    <button (click)="editSubmit()" >Edit</button>
+</div>
